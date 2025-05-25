@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "exporter": "KAREMAX INDUSTRIAL LIMITED",
+    "exporter_address": "NO.217, NO.2 BUILDING, NO.15 SOUTH OF RIYING RD, FREE TRADE ZONE, SHANGHAI, CHINA",
+    "document_type": "PROFORMA INVOICE",
+    "recipient": "Mayor de Insumos Alpha & Omega, C.A.",
+    "quote_number": "VE24MAO1022S",
+    "date": "2024.10.22",
+    "note": "Actual orders shall be subject to our final confirmation.",
+    "shipment_details": {
+      "from": "ShangHai",
+      "to": "Venezuela",
+      "price_term": "FOB SHANGHAI",
+      "payment_terms": "T/T 30% down payment once you confirm the PI, 70% balance payment before shipping",
+      "shipment": "By Sea",
+      "insurance": "COVERED BY BUYER",
+      "shipping_time": "Appendix shipping plan",
+      "trans_shipment": "ALLOWED"
+    },
+    "beneficiary": {
+      "account_no": "444270362286",
+      "account_name": "Karemax Industrial Limited",
+      "bank": "Bank of China Shanghai Wai Gao Qiao Free Trading Zone Sub Branch",
+      "swift_code": "BKCHCNBJ300",
+      "bank_address": "Wai Gao Qiao Free Trading Zone 355 Fute Rd (West 1), Pudong District, Shanghai, China"
+    }
+  },
+  "products": [
+    {
+      "item_no": 1,
+      "name": "CATGUT CHROMIC SUTURE REF813T",
+      "spec": "USP1, with 70cm , 36.4mm 1/2 circle needle",
+      "qty": 200,
+      "unit": "DOZENS",
+      "unit_price": 2.8,
+      "currency": "/dozen",
+      "amount": 560,
+      "qty_per_ctn": 100,
+      "ctns": 2,
+      "dimensions_cm": {
+        "L": 55,
+        "W": 33,
+        "H": 30
+      },
+      "unit_cbm": 0.05445,
+      "total_cbm": 0.1089,
+      "gross_weight_kg": 8.3,
+      "net_weight_kg": 7.3
+    },
+    {
+      "item_no": 2,
+      "name": "SUTURA NYLON 4-0 REF 14502T X12 BLESS HOSPITAL",
+      "spec": "SUTURE NYLON 4-0 14502T X 12 PCS",
+      "qty": 300,
+      "unit": "DOZENS",
+      "unit_price": 1.04,
+      "currency": "/DOZEN",
+      "amount": 312,
+      "qty_per_ctn": 100,
+      "ctns": 3,
+      "dimensions_cm": {
+        "L": 55,
+        "W": 33,
+        "H": 30
+      },
+      "unit_cbm": 0.05445,
+      "total_cbm": 0.16335,
+      "gross_weight_kg": 6,
+      "net_weight_kg": 5.5
+    }
+  ]
+}

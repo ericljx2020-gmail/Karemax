@@ -1,0 +1,13 @@
+name: excel-processor
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - openpyxl
+  - xlsxwriter
+  - numpy
+  - pip
+  - pip:
+    - xlrd 
