@@ -44,18 +44,12 @@ export default async function ProductDetailPage({
                     {/* Image Gallery */}
                     <div className="flex flex-col-reverse">
                         <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-100 relative">
-                            {/* Placeholder for now */}
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-50">
-                                <span className="text-6xl font-bold text-gray-200">IMG</span>
-                            </div>
-                            {/* 
-              <Image
-                src={images[0] || "/placeholder.jpg"}
-                alt={product.name}
-                fill
-                className="h-full w-full object-cover object-center"
-              />
-              */}
+                            <Image
+                                src={images[0] || "/placeholder.jpg"}
+                                alt={product.name}
+                                fill
+                                className="h-full w-full object-cover object-center"
+                            />
                         </div>
                     </div>
 

@@ -40,15 +40,19 @@ export default function NewProductPage() {
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium text-gray-700">Image URL</label>
+                    <label className="block text-sm font-medium text-gray-700">Product Image</label>
                     <input
-                        type="text"
-                        name="imageUrl"
-                        placeholder="/placeholder.jpg"
-                        defaultValue="/placeholder.jpg"
-                        className="mt-1 block w-full rounded-md border border-gray-300 p-2 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                        type="file"
+                        name="image"
+                        accept="image/*"
+                        className="mt-1 block w-full text-sm text-gray-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-md file:border-0
+              file:text-sm file:font-semibold
+              file:bg-primary-50 file:text-primary-700
+              hover:file:bg-primary-100"
                     />
-                    <p className="text-xs text-gray-500 mt-1">Enter a valid image URL.</p>
+                    <p className="text-xs text-gray-500 mt-1">Upload a product image (PNG, JPG).</p>
                 </div>
 
                 <div>

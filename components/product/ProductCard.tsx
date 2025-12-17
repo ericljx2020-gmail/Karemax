@@ -33,19 +33,12 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link href={`/products/${product.id}`} className="group block h-full">
             <div className="h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md flex flex-col">
                 <div className="relative aspect-square overflow-hidden bg-gray-100">
-                    {/* Placeholder for image if not available or external */}
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-50">
-                        {/* In a real app, use next/image with a real src */}
-                        <span className="text-4xl font-bold text-gray-200">IMG</span>
-                    </div>
-                    {/* If we had real images:
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            className="object-cover transition-transform group-hover:scale-105"
-          />
-          */}
+                    <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                    />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                     <div className="mb-2 text-xs font-medium text-primary-600 uppercase tracking-wide">

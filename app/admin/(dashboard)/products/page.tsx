@@ -28,6 +28,9 @@ export default async function AdminProductsPage() {
                     <thead className="bg-gray-50">
                         <tr>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Image
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Name
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -39,30 +42,40 @@ export default async function AdminProductsPage() {
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                        {products.map((product) => (
-                            <tr key={product.id}>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm font-medium text-gray-900">{product.name}</div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm text-gray-500">{product.category}</div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <div className="flex justify-end gap-2">
-                                        {/* Edit button (placeholder for now) */}
-                                        <Button variant="ghost" size="sm" disabled>
-                                            <Pencil className="h-4 w-4 text-gray-400" />
-                                        </Button>
-
-                                        <form action={deleteProduct.bind(null, product.id)}>
-                                            <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-900">
-                                                <Trash2 className="h-4 w-4" />
+                        {products.map((product) => {
+                            const images = JSON.parse(product.images);
+                            const imageUrl = images[0] || "/placeholder.jpg";
+                            return (
+                                <tr key={product.id}>
+                                    <td className="px-6 py-4 whitespace-nowrap">
+                                        <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 bg-gray-100 relative">
+                                            {/* Use img tag for simplicity in admin or Image if configured */}
+                                            <img src={imageUrl} alt="" className="h-full w-full object-cover object-center" />
+                                        </div>
+                                    </td>
+                                    <td className="px-6 py-4 whitespace-nowrap">
+                                        <div className="text-sm font-medium text-gray-900">{product.name}</div>
+                                    </td>
+                                    <td className="px-6 py-4 whitespace-nowrap">
+                                        <div className="text-sm text-gray-500">{product.category}</div>
+                                    </td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <div className="flex justify-end gap-2">
+                                            {/* Edit button (placeholder for now) */}
+                                            <Button variant="ghost" size="sm" disabled>
+                                                <Pencil className="h-4 w-4 text-gray-400" />
                                             </Button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
+
+                                            <form action={deleteProduct.bind(null, product.id)}>
+                                                <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-900">
+                                                    <Trash2 className="h-4 w-4" />
+                                                </Button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>
